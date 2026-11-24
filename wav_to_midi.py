@@ -62,9 +62,6 @@ def main() -> int:
     # do actual work here
     midi_output = MidiFile()
     for input_file in sys.argv[1:-1]:
-        if not input_file.endswith(".wav"):
-            print("Please input only .wav files")
-            return 0
         # load file
         (wav_input,srate) = librosa.load(input_file)
         # get midi pitches and timing
